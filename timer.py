@@ -8,7 +8,7 @@ class TimerWorker(QObject):
         super().__init__()
         self.timer = QTimer()
         self.timer.timeout.connect(self.update_timer)
-        self.time_remaining = 1 * 10  # 25 minutes initial time
+        self.time_remaining = 25 * 10  # 25 minutes initial time
 
     def start_timer(self):
         self.timer.start(1000)  # Start timer with 1-second interval
